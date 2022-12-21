@@ -1,0 +1,80 @@
+<div>
+  <h1><small>Formulario</small></h1>
+  <div class="row">
+    <div class="col d-flex justify-content-start">
+      <button class="btn btn-warning" routerLink="/taquerias">
+        <i class="fas fa-arrow-left"></i>
+        Regresar
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <form (ngSubmit)="guardar(formTaqueria)" #formTaqueria="ngForm">
+        <div class="form-group">
+          <label for="">Firebase ID</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Firebase ID"
+            [(ngModel)]="taqueria.id"
+            name="id"
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre"
+            [(ngModel)]="taqueria.nombre"
+            name="nombre"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Direccion</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Direccion"
+            [(ngModel)]="taqueria.direccion"
+            name="direccion"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="">TipoTacos</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="TipoTacos"
+            [(ngModel)]="taqueria.tiposTacos"
+            name="tiposTacos"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Horario</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Horario"
+            [(ngModel)]="taqueria.horario"
+            name="horario"
+            required
+          />
+        </div>
+
+        <hr />
+        <div class="form-group text-center">
+          <button class="btn btn-primary w-50" type="submit">
+            <i class="fas fa-save"></i>Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "/api":{
+    "target":"https://www.googleapis.com",
+    "secure": false,
+    "pathRewrite":{
+      "^/api":""
+
+    },
+
+    "logLevel":"debug",
+    "changeOrigin": true
+  }
+}
